@@ -5,7 +5,7 @@ const OptimizeJsPlugin = require('optimize-js-plugin');
 
 const plugins= [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'index.html',
       filename: 'index.html',
       inject: 'body'
     })
@@ -30,7 +30,7 @@ module.exports = (env) => {
             'webpack/hot/only-dev-server',
         ] :[]).concat(['.client/index.js']),
         output: {
-            filename: '.bundle.js',
+            filename: './bundle.js',
             path: path.resolve(__dirname, 'public'),
         }
         
